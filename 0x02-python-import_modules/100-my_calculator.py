@@ -15,5 +15,4 @@ if __name__ == "__main":
 
     a = int(argv[1])
     b = int(argv[3])
-    result = list_opr[operator](a, b)
-    print('{:d} {:s} {:d} = {:d}'.format(a, operator, b, result))
+    print('{:d} {:s} {:d} = {:d}'.format(a, operator, a, list_opr[operator](a, b)))
