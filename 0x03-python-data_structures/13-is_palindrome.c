@@ -7,29 +7,29 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *curr_node = *head;
+	listint_t *tmp = *head;
 	unsigned int size = 0, i = 0;
 	int data[10240];
 
-	if (head == NULL) /* non existing list is not palindrome*/
+	if (head == NULL) /* non-existing list is not */
 		return (0);
 
-	if (*head == NULL) /* exist but empty list is palindrome */
+	if (*head == NULL) /* empty list is palindrome */
 		return (1);
 
-	while (curr_node) /* find the size of linked list */
+	while (tmp) /* find size of linked list */
 	{
-		curr_node = curr_node->next;
+		tmp = tmp->next;
 		size += 1;
 	}
-	if (size == 1) /* single node in list is palindrome */
+	if (size == 1) /* single node list is palindrome */
 		return (1);
 
-	curr_node = *head;
-	while (curr_node) /* pull node data into array to compare */
+	tmp = *head;
+	while (tmp) /* pull node data into array to compare */
 	{
-		data[i++] = curr_node->n;
-		curr_node = curr_node->next;
+		data[i++] = tmp->n;
+		tmp = tmp->next;
 	}
 
 	for (i = 0; i <= (size / 2); i++)
