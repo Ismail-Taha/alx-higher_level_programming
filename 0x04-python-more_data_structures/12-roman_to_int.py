@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     for i in range(len_roman - 1, -1, -1):
         curvalue = rvalues.get(roman_string[i], 0)
 
-        if curvalue < prevalue:
+        if i > 0 and curvalue < rvalues.get(roman_string[i - 1], 0):
             res -= curvalue
         else:
             res += curvalue
