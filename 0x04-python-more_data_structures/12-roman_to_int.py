@@ -6,17 +6,16 @@ def roman_to_int(roman_string):
     }
 
     res = 0
-    prevalue = 0
-    len_roman = len(roman_string)
+    prev_value = 0
 
-    for i in range(len_roman - 1, -1, -1):
-        curvalue = rvalues.get(roman_string[i], 0)
+    for numeral in reversed(roman_string):
+        cur_value = rvalues.get(numeral, 0)
 
-        if i > 0 and curvalue < rvalues.get(roman_string[i - 1], 0):
-            res -= curvalue
+        if cur_value < prev_value:
+            res -= cur_value
         else:
-            res += curvalue
+            res += cur_value
 
-        prevalue = curvalue
+        prev_value = cur_value
 
     return res
