@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Module 6-square.
-
+""" Module 6-square. """
+"""
 Defines class Square with private size and position; and public area
 Can access and update size and position
 Can print to stdout the square using #'s
@@ -12,7 +12,6 @@ class Square:
     class Square definition
     Args:
         size (int): size of a side in square
-        position (tuple): tuple of two positive integers representing the position
     Functions:
         __init__(self, size, position)
         size(self)
@@ -28,7 +27,7 @@ class Square:
         Initializes square
         Attributes:
             size (int): defaults to 0 if none; don't use __size to call setter
-            position (tuple): tuple of two positive integers representing the position
+            position (int): tuple of two positive integers
         """
         self.size = size
         self.position = position
@@ -93,4 +92,3 @@ class Square:
             print("\n".join([" " * self.__position[0] +
                              "#" * self.__size
                              for rows in range(self.__size)]))
-
