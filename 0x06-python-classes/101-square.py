@@ -98,12 +98,12 @@ class Square:
         String representation of square so call to print works.
         Example: print(my_square).
         """
-        stri = ""
+        string = ""
         if self.__size == 0:
-            return stri
+            return string
 
-        stri += "\n" * self.position[1]
-        stri += "\n".join([" " * self.__position[0] +
+        string += "\n" * self.position[1]
+        string += "\n".join([" " * self.__position[0] +
                              "#" * self.__size
                              for rows in range(self.__size)])
-        return stri
+        return string
