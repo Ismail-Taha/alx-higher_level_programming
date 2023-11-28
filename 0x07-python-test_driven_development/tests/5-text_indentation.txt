@@ -1,0 +1,54 @@
+Test cases for 5-text_indentation.py
+====================================
+
+================================
+How to Use 5-text_indentation.py
+================================
+
+#By IZMAA
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation("Hello")
+Hello
+
+>>> text_indentation("He is.")
+He is.
+<BLANKLINE>
+
+>>> text_indentation("How?")
+How?
+<BLANKLINE>
+
+>>> text_indentation("Holbertoon:")
+Holbertoon:
+<BLANKLINE>
+
+>>> text_indentation("   Hello.   ")
+Hello.
+<BLANKLINE>
+
+>>> text_indentation(" How? ")
+How?
+<BLANKLINE>
+
+>>> text_indentation("  HHHH:  ")
+HHHH:
+<BLANKLINE>
+
+>>> text_indentation(" Hi: Hello?    How. ")
+Hi:
+<BLANKLINE>
+Hello?
+<BLANKLINE>
+How.
+<BLANKLINE>
+
+>>> text_indentation("Hi:How?Hello.")
+Hi:
+<BLANKLINE>
+How?
+<BLANKLINE>
+Hello.
+<BLANKLINE>
+
