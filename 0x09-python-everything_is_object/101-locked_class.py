@@ -3,6 +3,7 @@
 
 
 class LockedClass:
+
     """
     a class LockedClass with no class or object attribute, 
     that prevents the user from dynamically creating new instance attributes, 
