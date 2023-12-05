@@ -17,11 +17,11 @@ class Student:
 
         if (type(attrs) == list and
                 all(type(elem) == str for elem in attrs)):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+            return {ky: getattr(self, ky) for ky in attrs if hasattr(self, ky)}
         return self.__dict__
 
     def reload_from_json(self, json):
         """Replace all attributes of the Student"""
 
-        for key, value in json.items():
-            setattr(self, key, value)
+        for ky, value in json.items():
+            setattr(self, ky, value)
