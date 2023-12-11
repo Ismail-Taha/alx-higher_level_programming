@@ -7,7 +7,19 @@ class Rectangle(Base):
     """ Define Class Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Initializes instances
+        Args:
+            width (int): The width of the Rectangle.
+            height (int): The height of the Rectangle.
+            x (int): The x coordinate of the Rectangle.
+            y (int): The y coordinate of the Rectangle.
+            id (int): The identity of the Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -85,7 +97,7 @@ class Rectangle(Base):
         """ str special methode """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update methode that  update the attributes of the Rectangle instance"""
         if args:
             if len(args) >= 1:
