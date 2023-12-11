@@ -55,7 +55,6 @@ class Base:
             new_inst.update(**dictionary)
             return new_inst
 
-
     @classmethod
     def load_from_file(cls):
         """Return a list of classes from a file of JSON strings."""
