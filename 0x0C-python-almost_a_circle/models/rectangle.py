@@ -95,10 +95,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """ str special methode """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
-        """ update methode that  update the attributes of the Rectangle instance"""
+        """ methode update the attributes of the Rectangle instance"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
