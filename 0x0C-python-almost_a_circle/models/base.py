@@ -80,7 +80,7 @@ class Base:
                     field_n = ["id", "width", "height", "x", "y"]
                 else:
                     field_n = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csv_f, field_n=field_n)
+                writer = csv.DictWriter(csv_f, fieldnames=field_n)
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
@@ -94,7 +94,7 @@ class Base:
                     field_n = ["id", "width", "height", "x", "y"]
                 else:
                     field_n = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csv_f, field_n=field_n)
+                list_dicts = csv.DictReader(csv_f, fieldnames=field_n)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
