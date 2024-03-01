@@ -19,5 +19,4 @@ def find_peak(list_of_integers):
         if is_peak:
             return list_of_integers[i]
 
-    return None
-    
+    return None    
