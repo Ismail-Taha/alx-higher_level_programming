@@ -1,11 +1,12 @@
 #!/usr/bin/node
-const req = require('request');
-req(process.argv[2], function (err, res, body) {
-if (!err) {
-	const films = JSON.parse(body).results;
-	console.log(films.reduce((acc, film) => {
-	return film.characters.find((char) => char.endsWith('/18/'))
-		? acc + 1: acc;
+const request = require('request');
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
     }, 0));
   }
 });
